@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <Button
+        android:id="@+id/btnnotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="notificationshedule"
+        android:text="Notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnnotification"
+
+        android:id="@+id/networkoption">
+
+
+        <RadioButton
+            android:id="@+id/nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Network" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wifi"
+            android:id="@+id/wifi"
+            app:layout_constraintTop_toBottomOf="@+id/btnnotification"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/any"
+            android:text="Any"
+            app:layout_constraintTop_toBottomOf="@+id/wifi"
+            />
+    </RadioGroup>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_bettery"
+        android:text="Bettery Charging"
+        app:layout_constraintTop_toBottomOf="@+id/networkoption"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/switch_bettery"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Cancel"
+        android:onClick="cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/canaceljob"/>
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
